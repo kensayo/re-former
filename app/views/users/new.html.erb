@@ -1,4 +1,4 @@
-
+<!--
   <form action= "/users" method="post" accept-charset="UTF-8" class="col-4 d-flex flex-column">
     <h1>HTML Form</h1>
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
@@ -25,7 +25,7 @@
     <%= submit_tag 'OK' %>
   <%end%>
 <br>
-
+-->
 <%= form_with class: "col-4 d-flex flex-column", model: @user do |form| %>
     <h1>Form_with</h1>
     <%= form.label :username %>

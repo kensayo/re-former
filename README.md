@@ -9,8 +9,9 @@
 - Run bundle install to install the dependencies
 - Run rails db:migrate to migrate the database
 - Type `rails console` to enter the rails terminal
-- Type localhost:3000/ on the browser to display the project.
-- You are now ready to create and edit users.
+  To create a new user, go to: http://localhost:3000/users/new
+  To edit an existing user, go to: http://localhost:3000/users/id/edit
+  Replace the content inside the angle brackets with the appropriate values
 
 ## BUILT WITH
 
