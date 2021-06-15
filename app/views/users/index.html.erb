@@ -1,0 +1,11 @@
+<h1>User's</h1>
+
+<% @user = User.all %>
+<% @user.each do |user| %>
+  <div class="card my-2">
+    <div class="card-body d-flex flex-row justify-content-between">
+      <h3><%= user.username %></h3>
+      <%= link_to "Edit", edit_user_path(user), class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
