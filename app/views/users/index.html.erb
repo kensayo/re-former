@@ -1,5 +1,5 @@
 <h1>User's</h1>
-
+<%= link_to "New User", new_user_path, class: 'btn btn-primary' %>
 <% @user = User.all %>
 <% @user.each do |user| %>
   <div class="card my-2">
