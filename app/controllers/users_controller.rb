@@ -1,13 +1,12 @@
 class UsersController < ApplicationController
-
   def new
     @user = User.new
   end
 
   def create
-    #This line if for form_tag
-    #@user = User.new(username: params[:username], email: params[:email], password: params[:password])
-    #This line if for HTML and Form_with
+    # This line if for form_tag
+    # @user = User.new(username: params[:username], email: params[:email], password: params[:password])
+    # This line if for HTML and Form_with
     @user = User.new(user_params)
     if @user.save
       redirect_to new_user_path
