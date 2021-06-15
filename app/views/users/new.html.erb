@@ -1,0 +1,42 @@
+
+  <form action= "/users" method="post" accept-charset="UTF-8" class="col-4 d-flex flex-column">
+    <h1>HTML Form</h1>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+    <label for="username">Username:</label>
+    <input id="username" name="user[username]" type="text" />
+    <label for="email">Email:</label>
+    <input id="email" name="user[email]" type="text"/>
+    <label for="password">Password:</label>
+    <input id="password" name="user[password]" type="password" />
+    <br>
+    <input name="submit" type="submit" value="Submit"/>
+  </form>
+<br>
+
+  <%= form_tag("/users", method: "post", :class => 'col-4 d-flex flex-column') do %>
+    <h1>Form_tag</h1>
+    <%= label_tag(:username, 'User Name') %>
+    <%= text_field_tag(:username) %>
+    <%= label_tag(:email, 'User Email') %>
+    <%= email_field_tag(:email) %>
+    <%= label_tag(:password, 'User Password') %>
+    <%= password_field_tag(:password) %>
+    <br>
+    <%= submit_tag 'OK' %>
+  <%end%>
+<br>
+
+<%= form_with class: "col-4 d-flex flex-column", model: @user do |form| %>
+    <h1>Form_with</h1>
+    <%= form.label :username %>
+    <%= form.text_field :username %>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+    <br>
+    <%= form.submit %>
+<% end %>
+
+
+
